@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+
+const { spawn } = require('child_process');
+const path = require('path');
+const fs = require('fs');
+
+// Check if we're in a project directory
+const packageJsonPath = path.join(process.cwd(), 'package.json');
+const isProjectDir = fs.existsSync(packageJsonPath);
+
+if (!isProjectDir) {
+  console.log('🚀 Kinetic Strategy Validator (KSV)');
+  console.log('');
+  console.log('Usage:');
+  console.log('  npx kinetic-strategy-validator    # Start KSV in current directory');
+  console.log('');
+  console.log('The KSV will start a Next.js development server on http://localhost:3000');
+  console.log('');
+  console.log('📋 Quick Start:');
+  console.log('  1. Enter your strategy statement');
+  console.log('  2. Click "Analyze Strategy"');
+  console.log('  3. Review your Kinetic Score and bottlenecks');
+  console.log('');
+  console.log('🎯 Built on Kinetic Enterprise doctrine - Velocity over Static Friction');
+  process.exit(0);
+}
+
+console.log('🚀 Starting Kinetic Strategy Validator...');
+console.log('📍 Opening http://localhost:3000');
+console.log('');
+
+// Start the Next.js development server
+const nextDev = spawn('npx', ['next', 'dev'], {
+  stdio: 'inherit',
+  cwd: process.cwd(),
+  shell: true
+});
+
+nextDev.on('close', (code) => {
+  console.log(`KSV development server stopped with code ${code}`);
+});
+
+nextDev.on('error', (err) => {
+  console.error('❌ Failed to start KSV:', err.message);
+  console.log('');
+  console.log('💡 Make sure you have Next.js installed:');
+  console.log('   npm install -g next');
+  console.log('   or');
+  console.log('   npx next@latest');
+  process.exit(1);
+});

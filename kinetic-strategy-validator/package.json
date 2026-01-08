@@ -9,6 +9,18 @@
     "type": "git",
     "url": "https://github.com/ckotsidimos/strategy-validator.git"
   },
+  "bin": {
+    "ksv": "./bin/ksv"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "public/",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "DECISIONS.md"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

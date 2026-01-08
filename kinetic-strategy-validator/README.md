@@ -16,18 +16,25 @@ Built on the **Kinetic Enterprise doctrine** that prioritizes **Velocity over St
 
 ## 🚀 Quick Start
 
-### Step 1: Clone the repository
+### Option 1: Instant Execution (Recommended)
+```bash
+npx kinetic-strategy-validator
+```
+This will automatically start the KSV on http://localhost:3000 without any setup required.
+
+### Option 2: Clone and Install
+#### Step 1: Clone the repository
 ```bash
 git clone https://github.com/ckotsidimos/strategy-validator.git
 cd strategy-validator/kinetic-strategy-validator
 ```
 
-### Step 2: Install dependencies
+#### Step 2: Install dependencies
 ```bash
 npm install
 ```
 
-### Step 3: Start the development server
+#### Step 3: Start the development server
 ```bash
 npm run dev
 ```
