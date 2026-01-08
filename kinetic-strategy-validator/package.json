@@ -1,7 +1,14 @@
 {
   "name": "kinetic-strategy-validator",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "AI-powered strategy validation tool that scores enterprise strategies on the Kinetic Scale, differentiating between executable 'Kinetic' strategies and static boardroom presentations.",
+  "keywords": ["strategy", "validation", "kinetic", "enterprise", "scoring", "analysis"],
+  "author": "Kinetic Enterprise",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckotsidimos/strategy-validator.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
